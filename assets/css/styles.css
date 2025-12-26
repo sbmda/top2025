@@ -655,6 +655,10 @@ img {
 
 /* Responsive styles */
 @media (max-width: 600px) {
+    .game-card.has-crown::after {
+      transform: translateY(-155%) translateX(-38%) rotate(-25deg);
+    }
+    
     .header h1 {
         font-size: 1.4rem;
     }
