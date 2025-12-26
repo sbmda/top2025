@@ -13,6 +13,9 @@ function populate() {
             card.setAttribute('data-album', d.album);
             card.setAttribute('data-artist', d.artist);
             card.setAttribute('id', d.id);
+            if (d.id == 1) {
+                card.classList.add('has-crown');
+            }
             let img = document.createElement('img');
             img.src = d.img;
             img.alt = d.album + ", " + d.artist;
@@ -53,10 +56,10 @@ function populate() {
             review.append(overlay, content);
 
             container.append(card, review);
+
         });
 
-    });
-    
+    });    
 }
 
 function popsongs() {
@@ -142,6 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // songs();
     populate(); 
+    
 
     document.addEventListener('click', e => {
         if (e.target.classList.contains('game-card')) {

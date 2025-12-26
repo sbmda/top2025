@@ -218,7 +218,8 @@ a {
     transition: all 0.3s ease;
     transform-origin: center;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
+    z-index:3
 }
 
 .game-card:before {
@@ -330,6 +331,22 @@ img {
    color: white;
    transition: color 0.3s;
  }
+
+
+/* for bad bunny lol */
+
+.game-card.has-crown::after {
+  content: "👑";            
+  font-size: 50px;
+  position: absolute;
+  left: 8%;
+  top: 50%;
+  transform: translateY(-180%) translateX(-38%) rotate(-25deg);
+  z-index:5;
+  animation: scanlines 6s linear infinite;
+  /* pointer-events: none;      */
+  border: none;
+}
 
 
 /* POUR LES FENÊTRES INFOS  */
